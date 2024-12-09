@@ -21,10 +21,25 @@
     <script>
 
         // 10. for 結構說明
+        // for(宣告變數並給初始值;變數符合某些條件;變數累進){條件成立，執行這段}
+        for (var i = 0; i < 2; i++) {
+            console.log(i);
+
+        }
 
         // 20. break 和 continue 關鍵字
-        
+        // continue之後的公式都不會再執行，會直接進入變數累進，進下一回合。
+        for (var i = 0; i < 7; i++) {
+            if (i % 2 == 0) {
+                continue;
+            }
+            if (i == 5) {
+                break;
+            }
+            console.log(i);
+
+        }
     </script>
-</body> 
+</body>
 
 </html>

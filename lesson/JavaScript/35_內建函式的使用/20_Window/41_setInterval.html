@@ -13,20 +13,32 @@
     <script>
         var cnt = 0;
 
-        function apple() {
-            cnt += 1;
+        function apple() { //() ===>放參數的地方
+            cnt += 1; 
             console.log(` apple() ==>  ${cnt} `);
         } 
 
-        // 10. 放入  apple
-        
-        // 20. 放入 'apple()'
-        
-        // 30. 放入  apple()
-        
-        // 40. 呼叫 setInterval 時改為直接放入 function 
-        
 
+
+        // 10. 放入  apple
+        // handler:希望我放函數在裡面
+        //Interval計時器，設置每次循環的時間
+        setInterval(apple,1000);
+
+        // 20. 放入 'apple()'，和上方的效果一樣
+        setInterval('apple()',1000);
+
+        // 30. 放入  apple()，則會只執行一次就不執行了。
+        
+        // 40. 呼叫 setInterval 時改為直接放入 function
+        var timeId= setInterval(function(){
+            cnt += 1; 
+            console.log(` apple() ==>  ${cnt} `);
+        } ,1000); 
+
+        // 補充:停止計時的方式
+        // clearInterval(timeId);
+        
     </script>
 </body>
 
